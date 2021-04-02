@@ -1,0 +1,22 @@
+application:
+  sitename: ""
+  appName: ""
+  httpport: ""
+  runmode: ""
+  session: ""
+  version: ""
+
+database:
+  host:
+  port:
+  username:
+  password:
+  prefix:
+  timezone: ""
+
+
+notify:
+  email:
+  msg:
+  dingtalk:
+  wechat:

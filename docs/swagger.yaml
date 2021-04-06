@@ -1,0 +1,29 @@
+basePath: /api/v1
+host: localhost:8090
+info:
+  contact:
+    name: API Support
+    url: http://www.swagger.io/support
+  description: 定时任务管理系统后端API接口文档
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: 定时任务管理系统
+  version: "1.0"
+paths:
+  /get:
+    get:
+      consumes:
+      - application/json
+      description: 接口详细描述信息
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+          schema:
+            type: string
+      summary: 获取字符串
+      tags:
+      - 用户信息
+swagger: "2.0"

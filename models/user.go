@@ -1,6 +1,6 @@
 package models
 
-type Admin struct {
+type User struct {
 	Id          int
 	LoginName   string
 	RealName    string

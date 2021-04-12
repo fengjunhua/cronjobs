@@ -4,6 +4,7 @@ go 1.15
 
 require (
 	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751
+	github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
 	github.com/coreos/bbolt v1.3.5 // indirect
 	github.com/coreos/etcd v3.3.25+incompatible // indirect
 	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
@@ -13,9 +14,11 @@ require (
 	github.com/go-playground/validator/v10 v10.4.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/uuid v1.2.0 // indirect
+	github.com/jinzhu/gorm v1.9.16
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/prometheus/client_golang v1.10.0 // indirect
+	github.com/sirupsen/logrus v1.6.0
 	github.com/swaggo/files v0.0.0-20190704085106-630677cd5c14
 	github.com/swaggo/gin-swagger v1.3.0
 	github.com/swaggo/swag v1.7.0
@@ -28,8 +31,10 @@ require (
 	golang.org/x/sys v0.0.0-20210403161142-5e06dd20ab57 // indirect
 	golang.org/x/text v0.3.6 // indirect
 	golang.org/x/tools v0.1.0 // indirect
-	gorm.io/driver/mysql v1.0.5
-	gorm.io/gorm v1.21.6
+
 )
 
-replace github.com/coreos/bbolt => go.etcd.io/bbolt v1.3.5
+replace (
+	github.com/coreos/bbolt v1.3.5 => go.etcd.io/bbolt v1.3.5
+	go.etcd.io/bbolt v1.3.5 => github.com/coreos/bbolt v1.3.5
+)

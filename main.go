@@ -1,8 +1,8 @@
 package main
 
 import (
+   log "github.com/cihub/seelog"
    "github.com/gin-gonic/gin"
-   log "github.com/sirupsen/logrus"
    swaggerFiles "github.com/swaggo/files"
    ginSwagger "github.com/swaggo/gin-swagger"
    _ "github/fengjunhua/cronjobs/docs"
@@ -19,9 +19,14 @@ var secrets = gin.H{
 
 func init()  {
 
-   models.Init()
-   log.SetFormatter(&log.JSONFormatter{})
-   log.Println()
+    models.Init()
+    logger, err := log.LoggerFromConfigAsFile("./conf/seeLog.xml")
+    if err != nil{
+      log.Error(err)
+    }
+    log.ReplaceLogger(logger)
+
+
 }
 
 // @title 定时任务管理系统
